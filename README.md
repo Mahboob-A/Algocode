@@ -246,6 +246,21 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 
 Please follow the below steps to submit a solution in Algocode. 
 
+> ##### Note 
+> 
+> -  ** The `/api/v1/code/submit/` API endpoint is `Rate Limited`.**
+> 
+>> The API endpoint is rate limited with `one request per 20 seconds` i.e. `3 requests per minute`. 
+> 
+> -  Did you ask why?
+> 
+>> Well, I am using the free `AWS` and `Azure` server with only `1GB` of RAM! Hence I has no choice but to `Rate Limit` to the API. 
+> 
+> -  I have implemented the `Rate Limit` using `Token Bucket Algorithm` and I have applied the Rate Limiter class project wide using `Middleware in Django`. 
+> 
+> - <a href="https://github.com/Mahboob-A/code-manager/blob/main/src/core_apps/code_submit/RateLimitMiddleware.py">Click Here</a> to see the implementation of the `Rate Limiter Class`. 
+
+
 ##### Step 01
 
 Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. 
