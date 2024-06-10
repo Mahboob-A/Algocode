@@ -352,3 +352,28 @@ Please check the `API Guideline - Result Check in Algocode` section to learn how
 
 </details>
 
+<br/>
+<br/>
+
+<details>
+  <summary><h3 align="center">API Guideline - Code Result Check in Algocode</h3></summary>
+
+<br/>
+
+### Code Submission  Result Check in Algocode 
+
+Please make a `GET` request to the below API to get the result of your solution. 
+
+```http
+    GET  https://codemanager.algocode.site/api/v1/result/check/<submission_id>/
+```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `submission_id`    | `string` | **Required**. The `submission_id` of your solution as per the `API Guideline - Code Submission in Algocode` section.|
+
+
+
+<br/>
+
+</details>
