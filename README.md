@@ -411,4 +411,69 @@ You would see the result of your solution.
 
 <br/>
 
+</details><details>
+  <summary><h3 align="center">Contributing and Run Locally </h3></summary>
+
+#### Contribution and Development
+
+If you want to contribute or you want to run locally, then you can `fork` the `development` branch on each service mentioned in the Algocode Platform. 
+
+Please follow the `.envs-examples` to know the `env-variables` you would need to run the project locally. 
+
+Please follow the service that you want to contribute or run locally to get detailed guideline on local development. 
+
+</details>
+<details>
+  <summary><h3 align="center">Lessons Learnt and Challenges</h3></summary>
+
+
+#### The Backstage  
+
+The project itself was a challenge for me! 
+
+Once one of my mentors told me 
+
+> Do the hard things while you are learning, so that the implementation becomes easier for you. 
+
+I completely agree with this statement. I enjoy dealing with complex stuff, and `bugs` give me the `kick` I enjoy! 
+
+Well, enough praise of myself. 
+
+But I was not lying. When I though to build the project 2 months ago (it took 1.5 months to wrap up the project, two weeks was idle). 
+I had  zero knowledge whether I would be able to do this, but I had confidence that `somehow` I would do it, I do not know how, but I would do it for sure! 
+
+And I am writing today this readme that I have completed the project, and `somehow` I have made it! That's my motivation. 
+
+I see things as complex, but I know, somehow I would do it! 
+
+#### Challenges 
+
+* The initial challenge was the design. Designing a  complex project like `Online Judge` in `microservices` to build from `scratch` was not easy it sounds. 
+
+ * The communication between microservices were fun discovery. I was searching for optimal solution and I learnt `RabbitMQ` for this cause. 
+The Algocode platform is using an RabbitMQ instance from CloudAMQP platform. 
+
+* Building a Online Judge from scratch was the hardest part to accomplish. At times, I though to abandon the idea of building the online Judge from scratch and use 3rd party APIs, but my instinct did not allow it! 
+
+* However, after countless hours of debugging and reading internals of `docker networking`, `docker volume`, `docker containers`, `docker pyhton sdk`, `docker in docker` and `sibling docker`, `security in docker`, `linux internals` - I have explored countless number of internals and fixed bug. This resulted an Online Judge built from scratch using `docker`.  I have learnt so many new concepts while building the project `just proper by googling!`.  
+
+* The next struggle was the `production build` for the project. I had to shift from `development` build to `production build` and eventually to deploy the project in `AWS` and `Azure` servers. 
+
+* AWS closed my two new account to deploy the project, but after countless of emailing the `aws support`, they activated my account and finally I could deploy my project. 
+
+* To wrap up, the entire project was a challenge for me: The  design stage to research stage, to development stage to production stage to deployment stage - I had to repeat all these steps with all the 3 (currently) services behind the Algocode platform. 
+
+
+#### Learnings
+
+* I have gained practical experience with `RabbitMQ` building this project. 
+
+* I have gained deep knowledge on `docker`, `docker volumes`, `docker networking` etc. 
+
+* As the project is heavily dealing with files, I have gained valuable experience with `file handling` with `python`. 
+
+* As I have built the project from `research`, `design`, `dev`, `production` to `deployment`, I have gained invaluable knowledge on design, development, production and deploy the project in `cloud services` like `AWS` or `Azure`. 
+
+
+
 </details>
