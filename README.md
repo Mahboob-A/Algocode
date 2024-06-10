@@ -254,7 +254,7 @@ Please follow the below steps to submit a solution in Algocode.
 > 
 > -  Did you ask why?
 > 
->> Well, I am using the free `AWS` and `Azure` server with only `1GB` of RAM! Hence I have no choice but to `Rate Limit` the API. 
+>> Well, I am using the free `AWS` and `Azure` servers with only `1GB` of RAM! Hence I have no choice but to `Rate Limit` the API. 
 > 
 > -  I have implemented the `Rate Limit` using `Token Bucket Algorithm` and I have applied the Rate Limiter class *Project Wide for the quoted API* using `Middleware in Django`. 
 > 
