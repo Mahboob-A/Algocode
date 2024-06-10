@@ -102,7 +102,7 @@ Please open postman or insomnia, and continue reading ...
 
 > The <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> is handling the user management. 
 > 
-> To Know more on the `Algocode Auth Service` please visit the repository. 
+> To Know more about the `Algocode Auth Service` please visit the repository. 
 
 You have two ways to submit a solution to the `Algocode` platform. You can create your own account, or you can use the `already available verified  account`.  
 
@@ -246,9 +246,9 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 
 <br/>
 
-> The <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is handling all the activities in mentioned in this section. 
+> The <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is handling all the activities mentioned in this section. 
 > 
->> To Know more on the `Algocode Code Manager Service` please visit the repository. 
+>> To Know more about the `Algocode Code Manager Service` please visit the repository. 
 
 <br/>
 <br/>
