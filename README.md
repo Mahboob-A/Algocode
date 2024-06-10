@@ -171,5 +171,7 @@ Send a `POST` request to the below endpoint to validate your account creation.
 ```
 If you have received the response as `ok`, congratulation on creating your account on Algocode!
 
+You can now login to your account with the `login endpoint` mentioned above to get `access token`.
+
 But in case you were not able to create account, please `raise an issue` and use the `ready to use account` instead. 
 
