@@ -68,7 +68,7 @@ You will need to visit this page in order to submit your solution. Just read the
 
 <br/>
 <br/>
-<h3 align="center">API Guideline - How to Submit Solution </h3>
+<h3 align="center">API Guideline - Registration in Algocode </h3>
 
 ###  Prerequisites 
 
@@ -90,10 +90,6 @@ You have two ways to submit a solution to the `Algocode` platform. You can creat
 
 Please copy the account details and the login endpoint. 
 
-Send a `POST` request to the endpoint, and you'll receive `access token` and `refresh token`. 
-
-Copy the `access token` and head on to the `Step 02` below.
-
 `Login Endpoint`: `https://auth.algocode.site/api/v1/auth/login/`
 
 `Account Credentials`: 
@@ -101,11 +97,16 @@ Copy the `access token` and head on to the `Step 02` below.
 "email": "mehboob@gmail.com", 
 "password": "12345678@1"
 ```
+
+Send a `POST` request to the endpoint, and you'll receive `access token` and `refresh token`. 
+
+Copy the `access token` and head on to the `Step 02` below.
+
 <br/>
  
 #### B. By Registering in the Algocode Platform
 
-If you want to use your own account so submit solutions, please create an account. 
+If you want to use your own account to submit solutions, please create an account. 
 
 Creating account involves two steps: 
 
@@ -119,7 +120,7 @@ Creating account involves two steps:
 
 Copy the below submit endpoint along with the `JSON` data format, and send a `POST` request. 
 
-> Please provide your real email address you'll receive `a token` in your email from the Algocode Auth domain `auth.algocode.site`. 
+> Please provide your real email address as you'll receive `a token` in your email from the Algocode Auth domain `auth.algocode.site`. 
 
 `Registration Endpoint`: `https://auth.algocode.site/api/v1/auth/registration/`
 
@@ -137,9 +138,11 @@ Copy the below submit endpoint along with the `JSON` data format, and send a `PO
 
 ###### b. Check Email for Token 
 
-At this time please check your email address, you will have received an email from `auth.algocode.site` domain. 
+At this time please check your email, you will have received an email from `auth.algocode.site` domain. 
 
-The email will have the below URL to validate your account activation. As Algocode does not have any frontend, we need to verify the account manually. 
+The email will have the below URL to validate your account activation. 
+
+As Algocode does not have any frontend, you need to verify the account manually. 
 
 `Example Token URL`: 
 
@@ -148,6 +151,7 @@ To confirm this is correct, go to https://auth.algocode.site/api/v1/auth/registr
 ```
 
 Open the email, and copy everything after the endpoint i.e. `https://auth.algocode.site/api/v1/auth/registration/account-confirm-email/` 
+
 For the above example, copy `Mw:1sFEOr:xsqvnifUV5ppDFqbQBrmp2sIXGoRY63BmnFddsYTau4`. 
 
 Send a `POST` request to the below endpoint to validate your account creation. 
@@ -169,9 +173,9 @@ Send a `POST` request to the below endpoint to validate your account creation.
 	"detail": "ok"
 }
 ```
-If you have received the response as `ok`, congratulation on creating your account on Algocode!
+If you have received the response as `ok`, congratulation on creating your account on Algocode! 
 
-You can now login to your account with the `login endpoint` mentioned above to get `access token`.
+You can now login to your account with the `login endpoint` mentioned above to get `access token` and head on to the `Step 02`.
 
 But in case you were not able to create account, please `raise an issue` and use the `ready to use account` instead. 
 
