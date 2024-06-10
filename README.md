@@ -1,3 +1,4 @@
+                         
 <br/>
 <div align="center">
 <a href="https://github.com/Mahboob-A/algocode">
@@ -16,18 +17,19 @@ Algocode is a DSA practice platform just like Leetcode!
 <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a>
 </p>
 </div>
-<br/>
-<br/>
 
 <h3 align="center">General Information</h3>
-Online Judge is an experiment to implement the Judge with [AlgoCode](https://github.com/Mahboob-A/algocode-backend) Platform a DSA platfrom just like Leetcode. 
 
-AlgoCode is a coding platfrom built in microservices architechture. To learn more about AlgoCode, please explore this repository: 
-[AlgoCode Backend](https://github.com/Mahboob-A/algocode-backend)
+Algocode is an online data structure and algorithm practice platform built in microservices architecture. 
 
-Online Judge can execute user codes and run test cases against the code output. 
 
-The Judge can handle the below events: 
+Algocode currently has three services: <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service .</a> <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service .</a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service .</a>
+<br/> <br/>
+Another service for Java code execution is under development. 
+
+The <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> of Algocode can execute user codes and run test cases against the code output. 
+
+The Online Judge of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> service can handle the below events: 
 
     a. AC (Accepted) 
     b. WA (Wrong Answer)
@@ -36,4 +38,4 @@ The Judge can handle the below events:
     e. Memory Limit Exceed 
     f. Segmentation Fault
 
-*The Online Judge is a pure docker implementation and no other 3rd party API or service has been used.*
+*The Online Judge used in <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> is a pure docker implementation and no other 3rd party API or service has been used.*
