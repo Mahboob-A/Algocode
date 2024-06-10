@@ -18,8 +18,6 @@ Algocode is a DSA practice platform just like Leetcode!
 </div>
 <br/>
 <br/>
-<br/>
-<br/>
 
 <h3 align="center">General Information</h3>
 Online Judge is an experiment to implement the Judge with [AlgoCode](https://github.com/Mahboob-A/algocode-backend) Platform a DSA platfrom just like Leetcode. 
