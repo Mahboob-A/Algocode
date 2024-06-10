@@ -43,16 +43,19 @@ The Online Judge of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>
 
 > Please refer to the respective services to learn more about them. You will find rich and detailed documentation in the respective service's github repository, I promise!  <br/>
 <br/>
-<h3 align="center">Deployment</h3>
+<details>
+<summary><h3 align="center">Deployment</h3></summary>
 
 #### Deployment Information 
 
 All the services in this project is deployed in  `AWS EC2`  or `Azure VM` in Ubuntu server 22.04.  <br/>
 The DNS is hosted in `Cloudflare`.   
 
+</details>
 <br/>
 <br/>
-<h3 align="center">Problem Lists</h3>
+<details>
+<summary><h3 align="center">Problem Lists</h3></summary> 
 
 #### Small Note
 
@@ -60,14 +63,17 @@ The DNS is hosted in `Cloudflare`.
 > [![Email Me](https://img.shields.io/badge/mahboob-black?style=flat&logo=gmail)](mailto:connect.mahboobalam@gmail.com?subject=Hello)
 <br/>
 
+
 #### Problem Lists in Algocode 
 
 I have prepared a Notion Page for all the problems currently available in the Algocode project. Please visit this link <a href="https://github.com/Mahboob-A/rcee/">Update Me with a notion page link</a> to get the information. <br/> <br/> 
 You will need to visit this page in order to submit your solution. Just read the problem statements, understand the problem, and copy the `problem id`. That's all you need to submit a solution! <br/><br/>
  Please read below for detailed guide on how to submit a solution in the *Algocode* platform. 
 
+</details>
 <br/>
 <br/>
+
 <details>
   <summary><h3 align="center">API Guideline - Registration in Algocode</h3></summary>
 
@@ -195,3 +201,5 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 > But in case you were not able to create account, please `raise an issue` and use the `ready to use account` instead. 
 
 <br/>
+
+</details>
