@@ -39,3 +39,8 @@ The Online Judge of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>
     f. Segmentation Fault
 
 *The Online Judge used in <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> is a pure docker implementation and no other 3rd party API or service has been used.*
+
+Please refer to the respective services to learn more about them. You will find rich and detailed documentation in the respective service, I promise!  <br/>
+<h3 align="center">Deployment</h3>
+All the services in this project is deployed in AWS EC2 or Azure VM in Ubuntu server 22.04.  
+The DNS is hosted in Cloudflare. 
