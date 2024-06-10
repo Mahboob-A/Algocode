@@ -18,6 +18,4 @@ Algocode is a DSA practice platform just like Leetcode!
 </p>
 </div>
 
-![github-header-image (2)](https://github.com/Mahboob-A/algocode/assets/109282492/daf6f12f-c161-4049-ae9b-41516878d112)
 
-https://github.com/Mahboob-A/algocode/assets/109282492/cd5d981f-1928-49a1-a4d8-0a5b21b92171"
