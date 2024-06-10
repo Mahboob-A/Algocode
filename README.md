@@ -48,7 +48,7 @@ The Online Judge of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>
 
 #### Deployment Information 
 
-All the services in this project is deployed in  `AWS EC2`  or `Azure VM` in Ubuntu server 22.04.  <br/>
+All the services in this project are deployed in  `AWS EC2`  or `Azure VM` in Ubuntu server 22.04.  <br/>
 The DNS is hosted in `Cloudflare`.   
 
 </details>
@@ -59,7 +59,7 @@ The DNS is hosted in `Cloudflare`.
 
 #### Small Note
 
-> As of today I have build the backend in microservices, there's no frontend for the project. I am fully focusing on the advanced backend engineering, hence, if you want to contribute or want to build a frontend for the project, please do not hesitate to email me here: 
+> As of today I have built the backend in microservices, there's no frontend for the project. I am fully focusing on the advanced backend engineering, hence, if you want to contribute or want to build a frontend for the project, please do not hesitate to email me here: 
 > [![Email Me](https://img.shields.io/badge/mahboob-black?style=flat&logo=gmail)](mailto:connect.mahboobalam@gmail.com?subject=Hello)
 <br/>
 
@@ -68,7 +68,8 @@ The DNS is hosted in `Cloudflare`.
 
 I have prepared a Notion Page for all the problems currently available in the Algocode project. Please visit this link <a href="https://github.com/Mahboob-A/rcee/">Update Me with a notion page link</a> to get the information. <br/> <br/> 
 You will need to visit this page in order to submit your solution. Just read the problem statements, understand the problem, and copy the `problem id`. That's all you need to submit a solution! <br/><br/>
- Please read below for detailed guide on how to submit a solution in the *Algocode* platform. 
+ Please read `API Guideline - Registration in Algocode` for account details  and 
+`API Guideline - Code Submission in Algocode` for detailed guide on how to submit a solution in the *Algocode* platform. 
 
 </details>
 <br/>
@@ -87,7 +88,9 @@ Please open postman or insomnia, and continue reading ...
 
 ###  Registration in the Algocode Platform
 
-<a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a>  is handling the user management. 
+> The <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> is handling the user management. 
+> 
+> To Know more on the `Algocode Auth Service` please visit the repository. 
 
 You have two ways to submit a solution to the `Algocode` platform. You can create your own account, or you can use the `already available verified  account`.  
 
@@ -203,3 +206,8 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 <br/>
 
 </details>
+<br/>
+<br/>
+
+<details>
+  <summary><h3 align="center">API Guideline - Registration in Algocode</h3></summary>
