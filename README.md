@@ -36,11 +36,7 @@ Algocode is an online data structure and algorithm practice backend built in mic
 The Judge is completely isolated and it is only accessible using `events`. Another RCE Engine service for `Java code execution` is under development. 
 <br/> <br/>
 
-
-
-The <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> of Algocode can execute `C++`  codes and run test cases against the code output. 
-
-The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> service can handle the below events: 
+The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> can execute `C++`  codes and run test cases against the code output. It can currently  handle the below events: 
 
     a. AC (Accepted) 
     b. WA (Wrong Answer)
@@ -49,9 +45,11 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
     e. Memory Limit Exceed 
     f. Segmentation Fault
 
+#### *NOTE* 
+
 **The `C++ Judge` in *<a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>* is a pure docker implementation and no other 3rd party API or service has been used.**
 
-> Please refer to the respective services to learn more about them. You will find rich and detailed documentation in the respective service's github repository, I promise!  <br/>
+> Please refer to the respective services to learn more about it. You will find rich and detailed documentation in the respective service's github repository, I promise!  <br/>
 <br/>
 <details>
 <summary><h3 align="center">Deployment</h3></summary>
