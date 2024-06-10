@@ -246,9 +246,9 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 
 <br/>
 
-> The <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is handling all the activities in mentioned in this > section. 
+> The <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is handling all the activities in mentioned in this section. 
 > 
-> To Know more on the `Algocode Code Manager Service` please visit the repository. 
+>> To Know more on the `Algocode Code Manager Service` please visit the repository. 
 
 <br/>
 <br/>
