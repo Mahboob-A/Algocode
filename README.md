@@ -90,13 +90,15 @@ You have two ways to submit a solution to the `Algocode` platform. You can creat
 
 Please copy the account details and the login endpoint. 
 
-`Login Endpoint`: `https://auth.algocode.site/api/v1/auth/login/`
+```http
+  POST https://auth.algocode.site/api/v1/auth/login/
+```
 
-`Account Credentials`: 
-```
-"email": "mehboob@gmail.com", 
-"password": "12345678@1"
-```
+| Parameter | Type     | Value                |
+| :-------- | :------- | :------------------------- |
+| `email`    | `string` |  `connect.mahboobalam@gmail.com`  |
+| `password` | `string` | `12345678@1`|
+
 
 Send a `POST` request to the endpoint, and you'll receive `access token` and `refresh token`. 
 
@@ -120,20 +122,25 @@ Creating account involves two steps:
 
 Copy the below submit endpoint along with the `JSON` data format, and send a `POST` request. 
 
-> Please provide your real email address as you'll receive `a token` in your email from the Algocode Auth domain `auth.algocode.site`. 
+> Please provide your **authentic email address** as you'll receive `a token` in your email from the Algocode Auth domain `auth.algocode.site`. 
 
-`Registration Endpoint`: `https://auth.algocode.site/api/v1/auth/registration/`
+<br/>
 
-`Payload`
-
+```http
+    POST https://auth.algocode.site/api/v1/auth/registration/
 ```
-"username": "YOUR_USER_NAME", 
-"email": "YOUR_AUTHENTIC_EMAIL_ADDRESS",
-"password1": "YOUR_PASSWORD",   // complex password with special characters like @ 
-"password2": "CONFIRM_PASSWORD",
-"first_name": "YOUR_FIRST_NAME",
-"last_name": "YOUR_LAST_NAME"
-```
+
+
+| Parameter | Type     |        Description                |
+| :-------- | :------- | :------------------------- |
+| `username`    | `string` | **Required** Your username for the account.  |
+| `email`    | `string` | **Required** Your valid email address.|
+| `password1`   | `string` | **Required** Your password. | 
+| `password2` | `string` |  **Required** Confirm your password. | 
+| `first_name` | `string` | **Required**  Your first name. | 
+| `last_name` | `string` | **Required** Your last name. | 
+
+
 <br/>
 
 ###### b. Check Email for Token 
@@ -150,29 +157,32 @@ As Algocode does not have any frontend, you need to verify the account manually.
 To confirm this is correct, go to https://auth.algocode.site/api/v1/auth/registration/account-confirm-email/Mw:1sFEOr:xsqvnifUV5ppDFqbQBrmp2sIXGoRY63BmnFddsYTau4/
 ```
 
-Open the email, and copy everything after the endpoint i.e. `https://auth.algocode.site/api/v1/auth/registration/account-confirm-email/` 
+Copy everything after the account validation URL endpoint i.e. `https://auth.algocode.site/api/v1/auth/registration/account-confirm-email/` 
 
 For the above example, copy `Mw:1sFEOr:xsqvnifUV5ppDFqbQBrmp2sIXGoRY63BmnFddsYTau4`. 
 
+<br/>
+
 Send a `POST` request to the below endpoint to validate your account creation. 
 
-`Account Validation Endpoint`: `https://auth.algocode.site/api/v1/auth/registration/verify-email/`
-
-`Payload`
-
-```
-{
-	"key": "YOUR_COPIED_KEY_FROM_EMAIL"
-}
-```
-
-`Response`
+```http
+    POST  https://auth.algocode.site/api/v1/auth/registration/verify-email/
 
 ```
-{
-	"detail": "ok"
-}
-```
+
+| Parameter | Type     | Description                |
+| :-------- | :------- | :------------------------- |
+| `key`    | `string` | **Required**. Your copied token from your email  |
+
+***Response***
+
+| Response Key | Type     |        Vlaue            |        Description        | 
+| :-------- | :------- | :------------------------- |:------------------------- | 
+| `detail`    | `string` |  `OK`                     | Registration is successful!|
+| `detail`    | `string` |   Any value other than `OK` | Registration is unsuccessful. Check the token again.|
+
+<br/>
+
 If you have received the response as `ok`, congratulation on creating your account on Algocode! 
 
 You can now login to your account with the `login endpoint` mentioned above to get `access token` and 
