@@ -26,11 +26,21 @@ Algocode is an online data structure and algorithm practice backend built in mic
 
 *Algocode currently has three services*: <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service .</a> <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service .</a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a>
 <br/> <br/>
-Another service for Java code execution is under development. 
 
-The <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> of Algocode can execute user codes and run test cases against the code output. 
+* <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> Auth Service handles user management.
 
-The Online Judge of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> service can handle the below events: 
+* <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> Code Manager Service handles `code submission`, 
+`code exec event creation to Message Queue`, and `saving and caching code executing result` to Database.
+
+* <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> RCE Engine Service contains the `C++` code execution Judge. 
+The Judge is completely isolated and it is only accessible using `events`. Another RCE Engine service for `Java code execution` is under development. 
+<br/> <br/>
+
+
+
+The <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> of Algocode can execute `C++`  codes and run test cases against the code output. 
+
+The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> service can handle the below events: 
 
     a. AC (Accepted) 
     b. WA (Wrong Answer)
@@ -39,7 +49,7 @@ The Online Judge of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>
     e. Memory Limit Exceed 
     f. Segmentation Fault
 
-**The Online Judge used in *<a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>* is a pure docker implementation and no other 3rd party API or service has been used.**
+**The `C++ Judge` in *<a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>* is a pure docker implementation and no other 3rd party API or service has been used.**
 
 > Please refer to the respective services to learn more about them. You will find rich and detailed documentation in the respective service's github repository, I promise!  <br/>
 <br/>
