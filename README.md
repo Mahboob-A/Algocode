@@ -78,7 +78,7 @@ Please open postman or insomnia, and continue reading ...
 
 <br/>
 
-###  Step 01 - Register in the Algocode Platform
+###  Registration in the Algocode Platform
 
 <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a>  is handling the user management. 
 
@@ -100,7 +100,7 @@ Please copy the account details and the login endpoint.
 
 Send a `POST` request to the endpoint, and you'll receive `access token` and `refresh token`. 
 
-Copy the `access token` and head on to the `Step 02` below.
+Copy the `access token` and head on to the `API Guideline - Code Submission in Algocode` section below.
 
 <br/>
  
@@ -175,7 +175,12 @@ Send a `POST` request to the below endpoint to validate your account creation.
 ```
 If you have received the response as `ok`, congratulation on creating your account on Algocode! 
 
-You can now login to your account with the `login endpoint` mentioned above to get `access token` and head on to the `Step 02`.
+You can now login to your account with the `login endpoint` mentioned above to get `access token` and 
 
-But in case you were not able to create account, please `raise an issue` and use the `ready to use account` instead. 
+head on to the `API Guideline - Code Submission in Algocode` section below.
 
+<br/>
+
+> But in case you were not able to create account, please `raise an issue` and use the `ready to use account` instead. 
+
+<br/>
