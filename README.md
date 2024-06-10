@@ -23,7 +23,7 @@ Algocode is a DSA practice platform just like Leetcode!
 Algocode is an online data structure and algorithm practice platform built in microservices architecture. 
 
 
-Algocode currently has three services: <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service .</a> <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service .</a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service .</a>
+Algocode currently has three services: <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service .</a> <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service .</a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a>
 <br/> <br/>
 Another service for Java code execution is under development. 
 
