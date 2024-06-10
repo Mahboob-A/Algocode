@@ -246,9 +246,9 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 
 Please follow the below steps to submit a solution in Algocode. 
 
-> ##### Note 
+> ##### Please Note - Rate Limit Alert    
 > 
-> -  ** The `/api/v1/code/submit/` API endpoint is `Rate Limited`.**
+> -  **The `/api/v1/code/submit/` API endpoint is `Rate Limited`.**
 > 
 >> The API endpoint is rate limited with `one request per 20 seconds` i.e. `3 requests per minute`. 
 > 
