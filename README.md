@@ -248,18 +248,19 @@ Please follow the below steps to submit a solution in Algocode.
 
 > ##### Please Note - Rate Limit Alert    
 > 
-> -  **The `/api/v1/code/submit/` API endpoint is `Rate Limited`.**
+> -  **The `/api/v1/code/submit/` API endpoint to submit code solutions is `Rate Limited`.**
 > 
 >> The API endpoint is rate limited with `one request per 20 seconds` i.e. `3 requests per minute`. 
 > 
 > -  Did you ask why?
 > 
->> Well, I am using the free `AWS` and `Azure` server with only `1GB` of RAM! Hence I has no choice but to `Rate Limit` to the API. 
+>> Well, I am using the free `AWS` and `Azure` server with only `1GB` of RAM! Hence I have no choice but to `Rate Limit` the API. 
 > 
-> -  I have implemented the `Rate Limit` using `Token Bucket Algorithm` and I have applied the Rate Limiter class project wide using `Middleware in Django`. 
+> -  I have implemented the `Rate Limit` using `Token Bucket Algorithm` and I have applied the Rate Limiter class *Project Wide for the quoted API* using `Middleware in Django`. 
 > 
 > - <a href="https://github.com/Mahboob-A/code-manager/blob/main/src/core_apps/code_submit/RateLimitMiddleware.py">Click Here</a> to see the implementation of the `Rate Limiter Class`. 
 
+<br/>
 
 ##### Step 01
 
