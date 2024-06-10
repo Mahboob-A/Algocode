@@ -17,8 +17,7 @@ Algocode is a DSA practice platform just like Leetcode!
 <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a>
 </p>
 </div>
-<br/>
-<br/>
+
 <h3 align="center">General Information</h3>
 
 Algocode is an online data structure and algorithm practice backend built in microservices architecture. 
@@ -50,8 +49,7 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
 
 **The `C++ Judge` in *<a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>* is a pure docker implementation and no other 3rd party API or service has been used.**
 
-> Please refer to the respective services to learn more about it. You will find rich and detailed documentation in the respective service's github repository, I promise!  <br/>
-<br/>
+> Please refer to the respective services to learn more about it. You will find rich and detailed documentation in the respective service's github repository, I promise!  
 <details>
 <summary><h3 align="center">Deployment</h3></summary>
 
@@ -64,8 +62,7 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
 The DNS for the platform `www.algocode.site` is hosted on `Cloudflare`.   
 
 </details>
-<br/>
-<br/>
+
 <details>
 <summary><h3 align="center">Problem Lists</h3></summary> 
 
@@ -84,8 +81,6 @@ You will need to visit this page in order to submit your solution. Just read the
 `API Guideline - Code Submission in Algocode` for detailed guide on how to submit a solution in the *Algocode* platform. 
 
 </details>
-<br/>
-<br/>
 
 <details>
   <summary><h3 align="center">API Guideline - Registration in Algocode</h3></summary>
@@ -215,11 +210,7 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 
 > But in case you were not able to create account, please `raise an issue` and use the `ready to use account` instead. 
 
-<br/>
-
 </details>
-<br/>
-<br/>
 
 <details>
   <summary><h3 align="center">API Guideline - Code Submission in Algocode</h3></summary>
@@ -347,20 +338,15 @@ You would be able to see the result of your solution using the `submission_id`.
 <br/>
 
 Please check the `API Guideline - Result Check in Algocode` section to learn how to check the `code submission result.` 
-<br/>
-<br/>
-
 </details>
 
-<br/>
-<br/>
 
 <details>
   <summary><h3 align="center">API Guideline - Code Result Check in Algocode</h3></summary>
 
 <br/>
 
-### Code Submission  Result Check in Algocode 
+####  Code Submission  Result Check in Algocode 
 
 Please make a `GET` request to the below API to get the result of your solution. 
 
@@ -372,7 +358,56 @@ Please make a `GET` request to the below API to get the result of your solution.
 | :-------- | :------- | :------------------------- |
 | `submission_id`    | `string` | **Required**. The `submission_id` of your solution as per the `API Guideline - Code Submission in Algocode` section.|
 
+You would see the result of your solution. 
 
+</details>
+<details>
+  <summary><h3 align="center">Code Submission Result Examples</h3></summary>
+
+<br/>
+
+#### Some Code Submission Result Snapshots
+
+<br/> 
+
+##### A. AC Solution 
+
+ ![dd8dbfe4-621b-49f1-b3a6-7ab2a892db87](https://github.com/Mahboob-A/algocode/assets/109282492/378d23ae-e059-47eb-866d-7c73d329b430) 
+<br/>
+<br/>
+
+##### B. WA Solution 
+
+  ![bedb4255-86c9-4417-b920-5976e6129cbb](https://github.com/Mahboob-A/algocode/assets/109282492/69bce2c1-5e16-4685-9069-23492068b55e)
+<br/>
+<br/>
+
+##### C. Compilation Error
+
+![1c5edd39-8ccd-4e23-a61d-66ae9564ca85](https://github.com/Mahboob-A/algocode/assets/109282492/9df40b17-b3f9-48d4-9662-3acdc1f594b8) 
+<br/>
+<br/>
+
+
+##### D. Segmentation Fault 
+
+![WhatsApp Image 2024-06-05 at 11 42 42 PM (1)](https://github.com/Mahboob-A/algocode/assets/109282492/0a3e1d3f-bafb-41a4-8f30-29eb5a9133e5)
+<br/>
+<br/>
+
+
+##### E. Memory Limit Exceed
+
+![WhatsApp Image 2024-06-05 at 11 42 03 PM (1)](https://github.com/Mahboob-A/algocode/assets/109282492/766f01f7-e97a-4aa7-858a-d7dddbf89b7d)
+<br/>
+<br/>
+
+
+##### F. Time Limit Exceed 
+
+![WhatsApp Image 2024-06-05 at 11 42 03 PM (1)](https://github.com/Mahboob-A/algocode/assets/109282492/766f01f7-e97a-4aa7-858a-d7dddbf89b7d)
+<br/>
+<br/>
 
 <br/>
 
