@@ -68,7 +68,8 @@ You will need to visit this page in order to submit your solution. Just read the
 
 <br/>
 <br/>
-<h3 align="center">API Guideline - Registration in Algocode </h3>
+<details>
+  <summary><h3 align="center">API Guideline - Registration in Algocode</h3></summary>
 
 ###  Prerequisites 
 
@@ -147,7 +148,7 @@ Copy the below submit endpoint along with the `JSON` data format, and send a `PO
 
 At this time please check your email, you will have received an email from `auth.algocode.site` domain. 
 
-The email will have the below URL to validate your account activation. 
+The email will have  an email validation URL to validate your account activation. *Do not click the URL*
 
 As Algocode does not have any frontend, you need to verify the account manually. 
 
@@ -170,13 +171,13 @@ Send a `POST` request to the below endpoint to validate your account creation.
 
 ```
 
-| Parameter | Type     | Description                |
+| Parameter | Type     |  Value                |
 | :-------- | :------- | :------------------------- |
 | `key`    | `string` | **Required**. Your copied token from your email  |
 
 ***Response***
 
-| Response Key | Type     |        Vlaue            |        Description        | 
+| Response Key | Type     |        Value            |        Description        | 
 | :-------- | :------- | :------------------------- |:------------------------- | 
 | `detail`    | `string` |  `OK`                     | Registration is successful!|
 | `detail`    | `string` |   Any value other than `OK` | Registration is unsuccessful. Check the token again.|
