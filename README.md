@@ -411,7 +411,9 @@ You would see the result of your solution.
 
 <br/>
 
-</details><details>
+</details>
+
+<details>
   <summary><h3 align="center">Contributing and Run Locally </h3></summary>
 
 #### Contribution and Development
@@ -474,9 +476,10 @@ The Algocode platform is using an RabbitMQ instance from CloudAMQP platform.
 
 * As I have built the project from `research`, `design`, `dev`, `production` to `deployment`, I have gained invaluable knowledge on design, development, production and deploy the project in `cloud services` like `AWS` or `Azure`. 
 
+</details>
 
-<br/>
-<br/>
+###### Please visit the service repositories mentioned in the introduciton section for detailed guild on the services of Algocode platform.
+
 <br/>
 
 </details><a href="https://www.linux.org/" target="blank">
