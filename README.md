@@ -230,7 +230,7 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 > 
 >> If you have not done this, please check `API Guideline - Registration in Algocode` section for guideline. 
 > 
-> Get the `acces token` using the `user credentials` as per  `API Guideline - Registration in Algocode` section. 
+> - Get the `acces token` using the `user credentials` as per  `API Guideline - Registration in Algocode` section. 
 >
 > - To submit a solution, you should visit the `notion page` <a href="https://github.com/Mahboob-A/rcee/">Update Me with a notion page link</a> for the available problems in the Algocode. 
 > 
@@ -240,9 +240,87 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 > 
 >>> Please check the `Problem Lists` section for information. 
 
+<br/>
 
+### Code Submission in Algocode 
 
+Please follow the below steps to submit a solution in Algocode. 
 
+##### Step 01
 
+Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. You can simply make use of `ChatGPT` or `Gemini` for this task. You can share the code to `ChatGPT` or `Gemini` and ask it to convert it into `JSON`. That's it! 
 
+##### Step 02 
+
+As you have copied the `access token` from the `API Guideline - Registration in Algocode` section, please paste the `access token` in `Bearer Token` option in `Auth` section in Postman or Insomnia. 
+
+<br/>
+
+Now, you are ready to submit the solution to the Algocode platform. Please send a `POST` request to the below API following the API reference.
+
+<br/> 
+
+```http
+    POST https://codemanager.algocode.site/api/v1/code/submit/
+```
+
+| Parameter | Type     | Value/Description                |
+| :-------- | :------- | :------------------------- |
+| `problem_id`    | `string` | **Required**. The `problem_id` of the problem you are submitting the solution. |
+| `lang` | `string` | **Required**. `cpp`. Currently `cpp' is supported. `java` RCE Engine is under development. |
+| `code`    | `string` | **Required**. Your solution for the problem in `JSON` format.|
+
+<br/> 
+
+##### Example Payload 
+
+Here's an example payload for one of a problem in Algocode `Sqrt(X)`. The problem is same as this <a href="https://leetcode.com/problems/sqrtx/">Leetcode Problem.</a>
+
+<br/> 
+
+`Example Payload`
+
+```
+{
+    "problem_id": "f17f511a-8c53-41d3-b750-7673d25835af", 
+    "lang": "cpp", 
+    "code": "#include <iostream>\n\nint mySqrt(int x) {\n    if (x == 0) return 0;\n    int left = 1, right = x, result = 0;\n    while (left <= right) {\n        
+     int mid = left + (right - left) / 2;\n        if (mid <= x / mid) {\n            result = mid;\n            left = mid + 1;\n        } else {\n            right = mid - 1;\n        }\n    
+    }\n    return result;\n}\n\nint main() {\n    int t;\n    std::cin >> t;\n    while (t--) {\n        int x;\n        std::cin >> x;\n        std::cout << mySqrt(x) << 
+    std::endl;\n    }\n    return 0;\n}\n"
+}
+``` 
+<br/>
+
+##### Response 
+
+Once you have submitted your solution to the Algocode, you will receive a response with a `submission_id`. 
+You would be able to see the result of your solution using the `submission_id`.  
+
+<br/>
+
+| Response Key | Type     | Value/Description       |  
+| :-------- | :------- | :------------------------- |
+| `detail`    | `string` | `Your response has been submitted`|
+| `submission_id` | `string` | The `submission_id` of your code solution. |
+
+<br/>
+
+##### Example Response 
+
+```
+{
+    "result": {
+        "detail": "Your response has been submitted.",
+        "submission_id": "5993d00f-62fa-437c-8724-ee588265175b"
+    }
+}
+```
+<br/>
+
+Please check the `API Guideline - Result Check in Algocode` section to learn how to check the `code submission result.` 
+<br/>
+<br/>
+
+</details>
 
