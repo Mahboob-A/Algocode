@@ -57,9 +57,9 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
 
 #### Deployment Information 
 
-<a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is deployed in `AWS EC2` in Ubuntu 22.04 server.  <br/>
+<a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is deployed on `AWS EC2` in Ubuntu 22.04 server.  <br/>
 
-<a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> are deployed in `Azure VM` in Ubuntu 22.04 server.  
+<a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> are deployed on `Azure VM` in Ubuntu 22.04 server.  
 <br/>
 The DNS for the platform `www.algocode.site` is hosted on `Cloudflare`.   
 
@@ -90,7 +90,7 @@ You will need to visit this page in order to submit your solution. Just read the
 <details>
   <summary><h3 align="center">API Guideline - Registration in Algocode</h3></summary>
 
-###  Prerequisites 
+####  Prerequisites 
 
 You will need `postman` or `insomnia` to submit a solution to the project. I know you do have postman or insomnia! 
 
@@ -222,4 +222,27 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 <br/>
 
 <details>
-  <summary><h3 align="center">API Guideline - Registration in Algocode</h3></summary>
+  <summary><h3 align="center">API Guideline - Code Submission in Algocode</h3></summary>
+
+> #### Prerequisites 
+>
+> - I hope you have noted the readily available user account or you have created an account in Algocode. 
+> 
+>> If you have not done this, please check `API Guideline - Registration in Algocode` section for guideline. 
+> 
+> Get the `acces token` using the `user credentials` as per  `API Guideline - Registration in Algocode` section. 
+>
+> - To submit a solution, you should visit the `notion page` <a href="https://github.com/Mahboob-A/rcee/">Update Me with a notion page link</a> for the available problems in the Algocode. 
+> 
+>> Go through the problems, and copy the `problem_id` of the problem you want to submit a solution. 
+> 
+>> Why notion? Did you ask? 
+> 
+>>> Please check the `Problem Lists` section for information. 
+
+
+
+
+
+
+
