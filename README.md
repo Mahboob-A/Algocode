@@ -248,11 +248,12 @@ Please follow the below steps to submit a solution in Algocode.
 
 ##### Step 01
 
-Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. You can simply make use of `ChatGPT` or `Gemini` for this task. You can share the code to `ChatGPT` or `Gemini` and ask it to convert it into `JSON`. That's it! 
+Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. 
+You can simply make use of `ChatGPT` or `Gemini` for this task. You can share the code to `ChatGPT` or `Gemini` and ask it to convert it into `JSON`. That's it! 
 
 ##### Step 02 
 
-As you have copied the `access token` from the `API Guideline - Registration in Algocode` section, please paste the `access token` in `Bearer Token` option in `Auth` section in Postman or Insomnia. 
+As you have copied the `access token` as per the `API Guideline - Registration in Algocode` section, please paste the `access token` in `Bearer Token` option in `Auth` section in Postman or Insomnia. 
 
 <br/>
 
@@ -267,7 +268,7 @@ Now, you are ready to submit the solution to the Algocode platform. Please send 
 | Parameter | Type     | Value/Description                |
 | :-------- | :------- | :------------------------- |
 | `problem_id`    | `string` | **Required**. The `problem_id` of the problem you are submitting the solution. |
-| `lang` | `string` | **Required**. `cpp`. Currently `cpp' is supported. `java` RCE Engine is under development. |
+| `lang` | `string` | **Required**. `cpp`. Currently `cpp` is supported. `java` RCE Engine is under development. |
 | `code`    | `string` | **Required**. Your solution for the problem in `JSON` format.|
 
 <br/> 
@@ -294,15 +295,17 @@ Here's an example payload for one of a problem in Algocode `Sqrt(X)`. The proble
 
 ##### Response 
 
-Once you have submitted your solution to the Algocode, you will receive a response with a `submission_id`. 
+Once you have submitted your solution to the Algocode `Code Manager Service`, you will receive a response with a `submission_id`. 
 You would be able to see the result of your solution using the `submission_id`.  
 
 <br/>
 
 | Response Key | Type     | Value/Description       |  
 | :-------- | :------- | :------------------------- |
+| `result`    | `dict[dict]]` | A dictionary containing the request's response.|
 | `detail`    | `string` | `Your response has been submitted`|
-| `submission_id` | `string` | The `submission_id` of your code solution. |
+| `submission_id` | `string` | The `submission_id` for your solution submission. |
+
 
 <br/>
 
