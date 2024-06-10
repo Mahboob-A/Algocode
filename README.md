@@ -33,7 +33,8 @@ Algocode is an online data structure and algorithm practice backend built in mic
 `code exec event creation to Message Queue`, and `saving and caching code executing result` to Database.
 
 * <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> RCE Engine Service contains the `C++` code execution Judge. 
-The Judge is completely isolated and it is only accessible using `events`. Another RCE Engine service for `Java code execution` is under development. 
+The Judge is completely isolated and it is only accessible using `events`.  <br/>
+Another RCE Engine service for `Java code execution` is under development. 
 <br/> <br/>
 
 The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> can execute `C++`  codes and run test cases against the code output. It can currently  handle the below events: 
@@ -56,8 +57,11 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
 
 #### Deployment Information 
 
-All the services in this project are deployed in  `AWS EC2`  or `Azure VM` in Ubuntu server 22.04.  <br/>
-The DNS is hosted in `Cloudflare`.   
+<a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a> is deployed in `AWS EC2` in Ubuntu 22.04 server.  <br/>
+
+<a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> are deployed in `Azure VM` in Ubuntu 22.04 server.  
+<br/>
+The DNS for the platform `www.algocode.site` is hosted on `Cloudflare`.   
 
 </details>
 <br/>
