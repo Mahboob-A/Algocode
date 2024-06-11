@@ -559,11 +559,7 @@ I know something is not simple as it sounds, but I know, `somehow I would manage
 
 * The initial challenge was the design. Designing a  complex project like `Online Judge` in `microservices` to build from `scratch` was not easy as it sounds. 
 
- * The communication between microservices were fun discovery. I was searching for optimal solution and I learnt `RabbitMQ` for this cause, and I ended up writing a nice blog on `RabbitMQ 101`. 
-
-Read <a href="https://imehboob.medium.com/message-queue-101-your-ultimate-guide-to-understand-message-queue-b2256961ab01">RabbitMQ 101 post here.</a> 
-
-The Algocode platform is using an RabbitMQ instance from CloudAMQP platform. 
+ * The communication between microservices were fun discovery. I was searching for optimal solution and I learnt `RabbitMQ` for this cause, and I ended up writing a nice blog on `RabbitMQ 101`. Read <a href="https://imehboob.medium.com/message-queue-101-your-ultimate-guide-to-understand-message-queue-b2256961ab01">RabbitMQ 101 Here</a>. The Algocode platform is using an RabbitMQ instance from CloudAMQP platform. 
 
 * Building a Online Judge from scratch was the hardest part to accomplish. At times, I though to abandon the idea of building the online Judge from scratch and use 3rd party APIs, but my instinct did not allow it! 
 
