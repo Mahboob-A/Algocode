@@ -33,7 +33,8 @@ Algocode is an online data structure and algorithm practice backend built in mic
 
 * <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> RCE Engine Service contains the `C++` code execution Judge. 
 The Judge is completely isolated and it is only accessible using `events`.  <br/>
-Another RCE Engine service for `Java Judge`  and 'Python Judge` are under development. 
+Another RCE Engine service for `Java Judge`  and `Python Judge` are under development. 
+Currently only `cpp` is supported.
 <br/> <br/>
 
 The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> can execute `C++`  codes and run test cases against the code output. It can currently  handle the below events: 
