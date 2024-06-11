@@ -47,9 +47,109 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
 
 #### *NOTE* 
 
-**The `C++ Judge` in *<a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>* is a pure docker implementation and no other 3rd party API or service has been used.**
+**A. The `C++ Judge` in *<a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a>* is a pure docker implementation and no other 3rd party API or service has been used.**
 
 > Please refer to the respective services to learn more about it. You will find rich and detailed documentation in the respective service's github repository, I promise!  
+
+**B. Rate Limit Alert**
+
+> The API endpoint to submit solution to the Algocode platfrom (API in <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service </a>) is rate limited to `1 request per 20 seconds`. 
+>> ```http 
+>>     POST https://codemanager.algocode.site/api/v1/code/submit/
+>> ``` 
+> 
+>> You can learn more on this in the `API Guideline - Code Submission in Algocode` section.
+<details>
+<summary><h3 align="center">Architecture and Workflow</h3></summary>
+
+#### Architecture of Algocode 
+
+![image](https://github.com/Mahboob-A/algocode/assets/109282492/72ad2d8a-f664-450e-9b0a-8fd5d25d4c9c)
+
+##### Algocode Services 
+
+The Algocode platform is comprised of 3 services. 
+<br/>
+<a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service</a> For user management.   
+<a href="https://github.com/Mahboob-A/code-manager">Code Manager Service</a> For interacting with client, data processing and event creation for RCE Engine.  
+<a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> For executing the code submitted by the user and produce result for Code Manager Service to consume. 
+<br/>
+
+> The mentioned RCE Engine is responsible to execute `C++` code. The RCE Engine for `Java` and `Python` is under development. 
+
+<br/>
+<br/>
+
+##### Workflow of Algocode - The Workflow below is Sequential How Algocode Works (See the Diagram)
+
+**A. <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service</a>** 
+
+- The access to the Algocode begins from the Auth Service. 
+
+- Algocode Auth Service is responsible for user management. 
+
+- The user creates an account or logs in into the Algocode platform to complete the authentication/authorization process. 
+
+- `PostgreSQL` database is used for user management. The database is `self-hosted` and capable of `backup` and `restore` data periodically. 
+
+<br/>
+
+**B. <a href="https://github.com/Mahboob-A/code-manager">Code Manager Service</a>**
+
+- The Code Manager service is the true manager which is responsible to interact with users to submit the code submission request and return them the answer of their solution. 
+
+- The user sends a `POST` request to the 
+
+``` http
+    POST https://codemanager.algocode.site/api/v1/code/submit/
+``` 
+API to submit their code solution. 
+
+- Code Manager verifies the `authenticity of the user`, `processes the submitted data`, `publishes the data in a RabbbitMQ instance` and the `queue` is based on the `programming language` the solution is written, and returns a `submission_id` to the client. 
+ 
+- Code Manager also listens to event produced by RCE Engine. The `RCE Engine executes the solution and publishes the result to an unified result queue`. 
+
+- Once message is consumed by Code Manager from `result queue`, Code Manager `caches the result in Redis` and stores the result in `MongoDB database.`
+
+- The client can send a `GET` request to the  `result check` 
+
+```http
+    GET  https://codemanager.algocode.site/api/v1/result/check/<submission_id>/
+```
+
+API to get the code execution result. The API is a `short polling request for 5 seconds`. 
+
+- The `GET` request checks the `cache` first for the result, then `checks in database` and if the result is still not found, then the API process waits for `5 seconds` for availability of the data.
+
+- If the data is available within the`5 seconds` wait time, it returns the result, otherwise, the below response will be returned. 
+
+> | Response Key | Type     | Value/Description          |
+> | :-------- | :------- | :------------------------- |
+> | `status`    | `string` | `pending`  |
+> | `data`    | `string` |  `null`    |
+
+<br/>
+
+**C. <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a>**
+
+- The RCE Engine comprises either `C++ Judge`, or `Java Judge`, or `Python Judge`. 
+
+- The RCE Engine consumes messages from respective `queue`. Each RCE Engine consumes `data` based on the `programming language` queue type i.e. RCE Engine for `C++ Judge` consumes data from `C++  queue`. 
+
+- The RCE Engine `processes the consumed data`, `prepares the data for execution` and passes the data to the `Judge`. 
+
+- The `Judge` creates a `secure` and `unprivileged` docker container to run the user submitted code. 
+
+- The `Judge` stores the output of the code in a file after the `code execution` is completed.
+
+- Once the `code execution` by the `Judge` is completed, the RCE Engine `compares the output with testcases`. 
+
+- After the `output comparison with testcases`, the RCE Engine formats the `result data` and `publish the result data` to an unified `result queue` in a `RabbitMQ` instance which is consumed by `Code Manager Service`. 
+
+<br/>
+<br/>  
+
+</details>
 <details>
 <summary><h3 align="center">Deployment</h3></summary>
 
@@ -411,9 +511,7 @@ You would see the result of your solution.
 
 <br/>
 
-</details>
-
-<details>
+</details><details>
   <summary><h3 align="center">Contributing and Run Locally </h3></summary>
 
 #### Contribution and Development
@@ -421,6 +519,11 @@ You would see the result of your solution.
 If you want to contribute or you want to run locally, then you can `fork` the `development` branch on each service mentioned in the Algocode Platform. 
 
 Please follow the `.envs-examples` to know the `env-variables` you would need to run the project locally. 
+
+All the services are `dockerized project`. You just need to `cd src`, create  `virtual environment`, activate it, and 
+run `make docker-up` and That's it!
+
+This will run the project for you. 
 
 Please follow the service that you want to contribute or run locally to get detailed guideline on local development. 
 
@@ -441,48 +544,55 @@ I completely agree with this statement. I enjoy dealing with complex stuff, and 
 
 Well, enough praise of myself. 
 
-But I was not lying. When I though to build the project 2 months ago (it took 1.5 months to wrap up the project, two weeks was idle). 
-I had  zero knowledge whether I would be able to do this, but I had confidence that `somehow` I would do it, I do not know how, but I would do it for sure! 
+But I was not lying. When I thought to build the project 2 months ago (it took 1.5 months to wrap up the project, two weeks was idle). 
+I had  zero knowledge whether I would be able to do it, but I had confidence that `somehow` I would do it. 
+My thought process was simple -  "I do  not know `exactly how`, but I would do it `somehow` for sure!" 
 
-And I am writing today this readme that I have completed the project, and `somehow` I have made it! That's my motivation. 
+And I am writing this `Readme` today  that I have completed the project, and `somehow` I have made it! That's my motivation. 
 
-I see things as complex, but I know, somehow I would do it! 
+I know something is not simple as it sounds, but I know, `somehow I would manage it!` 
 
 #### Challenges 
 
-* The initial challenge was the design. Designing a  complex project like `Online Judge` in `microservices` to build from `scratch` was not easy it sounds. 
+* The initial challenge was the design. Designing a  complex project like `Online Judge` in `microservices` to build from `scratch` was not easy as it sounds. 
 
- * The communication between microservices were fun discovery. I was searching for optimal solution and I learnt `RabbitMQ` for this cause. 
+ * The communication between microservices were fun discovery. I was searching for optimal solution and I learnt `RabbitMQ` for this cause, and I ended up writing a nice blog on `RabbitMQ 101`. 
+
+Read <a href="https://imehboob.medium.com/message-queue-101-your-ultimate-guide-to-understand-message-queue-b2256961ab01">RabbitMQ 101 post here.</a> 
+
 The Algocode platform is using an RabbitMQ instance from CloudAMQP platform. 
 
 * Building a Online Judge from scratch was the hardest part to accomplish. At times, I though to abandon the idea of building the online Judge from scratch and use 3rd party APIs, but my instinct did not allow it! 
 
-* However, after countless hours of debugging and reading internals of `docker networking`, `docker volume`, `docker containers`, `docker pyhton sdk`, `docker in docker` and `sibling docker`, `security in docker`, `linux internals` - I have explored countless number of internals and fixed bug. This resulted an Online Judge built from scratch using `docker`.  I have learnt so many new concepts while building the project `just proper by googling!`.  
+* However, after countless hours of debugging and reading internals of `docker networking`, `docker volume`, `docker containers`, `docker pyhton sdk`, `docker in docker` and `sibling docker`, `security in docker`, `linux internals` - I have explored countless number of internals and fixed hundred of bugs that taught me a lot. This resulted an Online Judge built from scratch using `docker`.  I have learnt so many new concepts while building the project `just proper by googling!`.  
 
 * The next struggle was the `production build` for the project. I had to shift from `development` build to `production build` and eventually to deploy the project in `AWS` and `Azure` servers. 
 
 * AWS closed my two new account to deploy the project, but after countless of emailing the `aws support`, they activated my account and finally I could deploy my project. 
 
-* To wrap up, the entire project was a challenge for me: The  design stage to research stage, to development stage to production stage to deployment stage - I had to repeat all these steps with all the 3 (currently) services behind the Algocode platform. 
+* To wrap up, the entire project was a challenge for me: `The  design stage to research stage`, `to development stage to production stage to deployment stage` - I had to repeat all these steps with all the 3 (currently) services behind the Algocode platform. 
 
 
 #### Learnings
 
 * I have gained practical experience with `RabbitMQ` building this project. 
 
-* I have gained deep knowledge on `docker`, `docker volumes`, `docker networking` etc. 
+* I have gained deep knowledge on `docker`, `docker volumes`, `docker networking`, `Lunux internals` and many more.
 
 * As the project is heavily dealing with files, I have gained valuable experience with `file handling` with `python`. 
 
 * As I have built the project from `research`, `design`, `dev`, `production` to `deployment`, I have gained invaluable knowledge on design, development, production and deploy the project in `cloud services` like `AWS` or `Azure`. 
 
+* As the project is in `microservises architecture`, I have gained practical knowledge on `communication`, `networking`,  between all other services; experience with cloud providers such a `AWS`, `Azure`  and onverall `dev to production` of a `SDLC`. 
+
 </details>
+
 
 ###### Please visit the service repositories mentioned in the introduciton section for detailed guild on the services of Algocode platform.
 
 <br/>
 
-</details><a href="https://www.linux.org/" target="blank">
+<a href="https://www.linux.org/" target="blank">
 <img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/linux/linux-original.svg" alt="Linux" height="40" width="40" />
 </a>
 <a href="https://postman.com" target="blank">
@@ -514,6 +624,12 @@ The Algocode platform is using an RabbitMQ instance from CloudAMQP platform.
 </a>
 <a href="https://circleci.com" target="blank">
 <img align="center" src="https://www.vectorlogo.zone/logos/circleci/circleci-icon.svg" alt="CircleCI" height="40" width="40" />
+</a>
+<a href="https://nodejs.org" target="blank">
+<img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="Node.js" height="40" width="40" />
+</a>
+<a href="https://kafka.apache.org/" target="blank">
+<img align="center" src="https://www.vectorlogo.zone/logos/apache_kafka/apache_kafka-icon.svg" alt="Kafka" height="40" width="40" />
 </a>
 <a href="https://www.rabbitmq.com" target="blank">
 <img align="center" src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg" alt="RabbitMQ" height="40" width="40" />
