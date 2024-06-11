@@ -183,6 +183,29 @@ You will need to visit this page in order to submit your solution. Just read the
  Please read `API Guideline - Registration in Algocode` for account details  and 
 `API Guideline - Code Submission in Algocode` for detailed guide on how to submit a solution in the *Algocode* platform. 
 
+- Although you can fetch all the problems and any specific problems using the below APIs.
+
+- To get all the Problems 
+
+```http
+    GET https://codemanager.algocode.site/api/v1/problem/all/
+```
+- The API responses with `paginated result`. 
+
+- To get a single Problem 
+
+```http
+    GET https://codemanager.algocode.site/api/v1/problem/<question_uuid>/
+```
+
+**To learn more on the Code Manager APIs and documentation, please visit the <a href="https://cm-doc.algocode.site/doc/">documentation</a> of `Code Manager Service`**
+
+
+
+
+
+ 
+
 </details>
 
 <details>
