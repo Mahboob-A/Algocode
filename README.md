@@ -182,7 +182,7 @@ The DNS for the platform `www.algocode.site` is hosted on `Cloudflare`.
 
 #### Problem Lists in Algocode 
 
-I have prepared a Notion Page for all the problems currently available in the Algocode project. Please visit this link <a href="https://github.com/Mahboob-A/rcee/">Update Me with a notion page link</a> to get the information. <br/> <br/> 
+I have prepared a Notion Page for all the problems currently available in the Algocode project. Please visit this link <a href="https://algocode.notion.site/Algocode-Problem-Lists-c9868c2fb29f43719c638e2e7d337f9a?pvs=4">Algocode Problem Lists</a> to get all the available problems. <br/> <br/> 
 You will need to visit this page in order to submit your solution. Just read the problem statements, understand the problem, and copy the `problem id`. That's all you need to submit a solution! <br/><br/>
  Please read `API Guideline - Registration in Algocode` for account details  and 
 `API Guideline - Code Submission in Algocode` for detailed guide on how to submit a solution in the *Algocode* platform. 
@@ -205,10 +205,6 @@ You will need to visit this page in order to submit your solution. Just read the
 **To learn more on the Code Manager APIs and documentation, please visit the <a href="https://cm-doc.algocode.site/doc/">documentation</a> of `Code Manager Service`**
 
 
-
-
-
- 
 
 </details>
 
@@ -353,7 +349,7 @@ head on to the `API Guideline - Code Submission in Algocode` section below.
 > 
 > - Get the `acces token` using the `user credentials` as per  `API Guideline - Registration in Algocode` section. 
 >
-> - To submit a solution, you should visit the `notion page` <a href="https://github.com/Mahboob-A/rcee/">Update Me with a notion page link</a> for the available problems in the Algocode. 
+> - To submit a solution, you should visit the `notion page` <a href="https://algocode.notion.site/Algocode-Problem-Lists-c9868c2fb29f43719c638e2e7d337f9a?pvs=4">Algocode Problem Lists</a> for the available problems in the Algocode. 
 > 
 >> Go through the problems, and copy the `problem_id` of the problem you want to submit a solution. 
 > 
