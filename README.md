@@ -394,7 +394,7 @@ Please follow the below steps to submit a solution in Algocode.
 
 ##### Step 01
 
-Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. Here's how you can convert the code in `JSON` in python. 
+Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. Here's how you can convert the code in `JSON` in `python`. 
 
 ```
 import json
