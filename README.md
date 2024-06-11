@@ -590,7 +590,6 @@ The Algocode platform is using an RabbitMQ instance from CloudAMQP platform.
 
 </details>
 
-
 ###### Please visit the service repositories mentioned in the introduciton section for detailed guild on the services of Algocode platform.
 
 <br/>
@@ -640,3 +639,12 @@ The Algocode platform is using an RabbitMQ instance from CloudAMQP platform.
 <a href="https://www.nginx.com" target="blank">
 <img align="center" src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nginx/nginx-original.svg" alt="Nginx" height="40" width="40" />
 </a>
+<br/>
+
+#### 🔗 Links
+
+
+[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/i-mahboob-alam/)
+[![twitter](https://img.shields.io/badge/twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://x.com/iMahboob_A)
+<br/>
+
