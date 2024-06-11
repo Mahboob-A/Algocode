@@ -62,7 +62,7 @@ The `C++ Judge` of <a href="https://github.com/Mahboob-A/rcee/">RCE Engine </a> 
 
 **C. Documentation**
 
-> All the services has dedicated documentation page. Please visit the respective service repository to learn more. 
+> All the services have dedicated documentation page. Please visit the respective service repository to learn more. 
 <details>
 <summary><h3 align="center">Architecture and Workflow</h3></summary>
 
