@@ -394,8 +394,23 @@ Please follow the below steps to submit a solution in Algocode.
 
 ##### Step 01
 
-Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. 
-You can simply make use of `ChatGPT` or `Gemini` for this task. You can share the code to `ChatGPT` or `Gemini` and ask it to convert it into `JSON`. That's it! 
+Write your solution for the problem you have chosen in `C++`, as currently `C++` is supported. Now, you have to convert it into `JSON` format. As the Algocode does not have client till now, to share data to the backend services, you need to convert it into `JSON`. Here's how you can convert the code in `JSON` in python. 
+
+```
+import json
+
+code = """
+
+# paste your code here.
+
+"""
+code = json.dumps(code)
+
+print(code)
+
+```
+Copy the printed code from terminal and and continue reading to learn about the `request body.` 
+
 
 ##### Step 02 
 
