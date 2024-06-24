@@ -9,7 +9,7 @@
 Algocode is a DSA practice platform just like Leetcode!
 <br/>
 <br/>
-<a href="https://imehboob.medium.com/my-experience-building-a-leetcode-like-online-judge-and-how-you-can-build-one-7e05e031455d"><strong>Read the blog »</strong></a>
+<a href="https://imehboob.medium.com/my-experience-building-a-leetcode-like-online-judge-and-how-you-can-build-one-7e05e031455d"  target="_blank" ><strong>Read the blog »</strong> </a>
 <br/>
 <br/>
 <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service .</a>  
