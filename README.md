@@ -179,7 +179,7 @@ API to get the code execution result. The API is a `short polling request for 5 
 </details>
 
 <details>
-<summary><h3 align="center">Deployment</h3></summary>
+<summary><h3 align="center">Deployment and Tech Stack</h3></summary>
 
 #### Deployment Information 
 
@@ -188,6 +188,38 @@ API to get the code execution result. The API is a `short polling request for 5 
 <a href="https://github.com/Mahboob-A/algocode-auth">Algocode Auth Service </a> and <a href="https://github.com/Mahboob-A/rcee/">RCE Engine Service</a> are deployed on `Azure VM` in Ubuntu 22.04 server.  
 <br/>
 The DNS for the platform `www.algocode.site` is hosted on `Cloudflare`.   
+
+#### Tech Stack 
+
+    1. Proxy and Monitoring:
+    a. Nginx as webserver.
+    b. Nginx Proxy Manager to manage Nginx.
+    c. Portainer to manage and monitor docker container in Auth Service.
+
+    2.  Backend and Server:
+    b. Gunicorn as application server.
+    e. Celery to process tasks asynchronously.
+    f. Flower to monitor celery worker.
+    g. Resend for email service.
+    h. Django as backend.
+    i. Django Rest Framework for API.
+
+    3. Databases and Cache:
+    j. PostgreSQL for user management database.
+    k. MondoDB for code execution result backend.
+    l. Redis for celery backend and cache.
+
+    4. Containerization and Code Execution:
+    m. Docker for containerization. 
+    n. Sibling Docker for secure foreign code execution.
+    o. RabbitMQ for asynchronous processing. 
+    p. Rate Limit (Token Bucket Algorighm, Django Middleware) for rate limit code submission API.
+
+    5. Deployment and Testing:
+    q. AWS EC2 instance for deployment
+    r. Cloudflare for DNS hosting. 
+    s. Postman for API testing.
+    
 
 </details>
 
